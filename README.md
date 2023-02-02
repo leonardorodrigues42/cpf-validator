@@ -1,2 +1,2 @@
 # cpf-validator-igma
-API de validação de cpf para cadastro de clientes.
+API de cadastro de clientes com validação de cpf.
