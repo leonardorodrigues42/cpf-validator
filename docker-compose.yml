@@ -20,7 +20,7 @@ services:
   web:
     build: .
     env_file: .env
-    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; export DJANGO_SETTINGS_MODULE=api_clients.settings; gunicorn -c gunicorn.conf.py api_clients.wsgi:application'
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; python manage.py collectstatic; export DJANGO_SETTINGS_MODULE=api_clients.settings; gunicorn -c gunicorn.conf.py api_clients.wsgi:application'
     volumes:
       - .:/code
     stdin_open: true
