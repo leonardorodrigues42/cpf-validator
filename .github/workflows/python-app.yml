@@ -35,5 +35,5 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with Django
       run: |
-        docker-compose run -e SECRET_KEY=$SECRET_KEY -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD -e POSTGRES_USER=$POSTGRES_USER -e POSTGRES_DB=$POSTGRES_DB test
+        docker-compose run test
         
