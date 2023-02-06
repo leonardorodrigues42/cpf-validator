@@ -1,4 +1,4 @@
-# Handler Archive CNAB
+# API Client
 
 ***A API faz o cadastro de clientes, com os campos Nome, CPF e Nascimento. Além de fazer a validação do CPF com algorítmo com as regras contidas no link: https://www.macoratti.net/alg_cpf.htm#:~:text=O.***
 
