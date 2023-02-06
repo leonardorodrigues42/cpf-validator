@@ -36,11 +36,7 @@ class ClientSerializer(serializers.ModelSerializer):
     def to_internal_value(self, data):
         if isinstance(data, QueryDict):
             data = data.dict()
-            format_date(data)
-        
-        birth = str(data.get("birth", None))
-        date_validate = datetime.strptime(birth, "%d/%m/%Y")
-        
+            format_date(data)        
         
         return super().to_internal_value(data)
         
