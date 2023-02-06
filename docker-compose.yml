@@ -26,7 +26,7 @@ services:
     
   web:
     build: .
-    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; export DJANGO_SETTINGS_MODULE=api_clients.settings; gunicorn -c gunicorn.conf.py api_clients.wsgi:application'
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; python manage.py collectstatic; export DJANGO_SETTINGS_MODULE=api_clients.settings; gunicorn -c gunicorn.conf.py api_clients.wsgi:application'
     environment:
       SECRET_KEY: "${SECRET_KEY}"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
