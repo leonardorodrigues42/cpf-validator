@@ -65,7 +65,7 @@ Copie o arquivo  `.env.example` para o `.env` e forneça as credenciais do banco
   export DJANGO_SETTINGS_MODULE=api_clients.settings
 	gunicorn -c gunicorn.conf.py api_clients.wsgi:application
 	```
-7.## Para rodar os testes##:
-	```
-	TEST=TEST python manage.py test
-	```
+## Para rodar os testes##:
+```
+TEST=TEST python manage.py test
+```
